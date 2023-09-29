@@ -1,5 +1,5 @@
-import Header from '../Header';
-import Search from '../Search';
+import Header from '../components/Header';
+import Search from '../components/Search';
 import './App.module.scss';
 
 function App() {

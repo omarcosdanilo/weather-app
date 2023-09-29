@@ -1,4 +1,4 @@
-import IHeaderProps from "../interfaces/IHeaderProps";
+import IHeaderProps from "../../interfaces/IHeaderProps";
 import style from './Header.module.scss';
 
 function Header({title}: IHeaderProps) {
