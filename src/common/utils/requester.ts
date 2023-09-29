@@ -8,7 +8,6 @@ async function getWeatherData(cityName: string) {
     
   } catch (error) {
     console.log(error);
-    
   }
 }
 
