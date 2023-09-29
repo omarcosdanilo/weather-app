@@ -1,9 +1,11 @@
 import IHeaderProps from "../interfaces/IHeaderProps";
-import style from './Button.module.scss';
+import style from './Header.module.scss';
 
 function Header({title}: IHeaderProps) {
   return (
-    <h1 className={style.header}>{ title }</h1>
+    <header className={style.header}>
+      <h1>{ title }</h1>
+    </header>
   )
 }
 
