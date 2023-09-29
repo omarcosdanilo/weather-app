@@ -1,8 +1,9 @@
+import Header from '../Header';
 import './App.module.scss';
 
 function App() {
   return (
-   <p>Hello world!</p>
+    <Header title="Previsão do tempo" />
   );
 }
 
