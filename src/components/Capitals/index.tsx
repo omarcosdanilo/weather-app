@@ -1,6 +1,10 @@
+import { ApiResponse } from '../../interfaces/IApiResponse';
 import style from './Capitals.module.scss';
 
-function Capitals() {
+interface CapitalsWeatherProps {
+  capitalsWeather: ApiResponse[]
+}
+function Capitals({ capitalsWeather }: CapitalsWeatherProps) {
   return (
     <>
     <div className={style.container}>
@@ -11,36 +15,18 @@ function Capitals() {
               <th>Min</th>
               <th>Max</th>
               <th>Cidade</th>
-              <th>Min</th>
-              <th>Max</th>
-              <th>Cidade</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>18</td>
-              <td>27</td>
-              <td>Rio de Janeiro</td>
-              <td>23</td>
-              <td>37</td>
-              <td>Salvador</td>
-            </tr>
-            <tr>
-              <td>18</td>
-              <td>27</td>
-              <td>Rio de Janeiro</td>
-              <td>23</td>
-              <td>37</td>
-              <td>Salvador</td>
-            </tr>
-            <tr>
-              <td>18</td>
-              <td>27</td>
-              <td>Rio de Janeiro</td>
-              <td>23</td>
-              <td>37</td>
-              <td>Salvador</td>
-            </tr>
+            {
+              capitalsWeather.map(capital => (
+                  <tr key={capital.id}>
+                    <td>{capital.main.temp_min.toFixed(1) + 'º'}</td>
+                    <td>{capital.main.temp_max.toFixed(1) + 'º'}</td>
+                    <td>{capital.name}</td>
+                  </tr>
+              ))
+            }
           </tbody>
         </table>
     </div>
