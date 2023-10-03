@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import style from './Search.module.scss';
-import getWeatherData from '../../common/utils/requester';
+import Requester from '../../common/utils/Requester';
 
 function Search() {
   const [searchText, setSearchText] = useState('');
 
   function searchWeather() {
-    getWeatherData(searchText);
+    Requester.getWeatherData(searchText);
     setSearchText('');
   }
 
