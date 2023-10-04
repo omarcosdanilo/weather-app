@@ -9,6 +9,7 @@ import { ApiResponse } from '../interfaces/IApiResponse';
 
 function App() {
   const [capitalsWeather, setCapitalsWeather] = useState<ApiResponse[]>([]);
+  const [cityWeather, setCityWeather] = useState({});
 
   useEffect(() => {
     async function getCapitalsData() {
@@ -23,7 +24,7 @@ function App() {
   return (
     <>
       <Header title="Previsão do tempo" />
-      <Search />
+      <Search setCityWeather={setCityWeather}/>
       <Capitals capitalsWeather={capitalsWeather} />
     </>
   );

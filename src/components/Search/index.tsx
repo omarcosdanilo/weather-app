@@ -1,12 +1,19 @@
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import style from './Search.module.scss';
 import Requester from '../../common/utils/Requester';
+import { ApiResponse } from '../../interfaces/IApiResponse';
 
-function Search() {
+interface ISerchProps {
+  setCityWeather: Dispatch<SetStateAction<ApiResponse>>
+}
+
+function Search({ setCityWeather }: ISerchProps) {
+
   const [searchText, setSearchText] = useState('');
 
-  function searchWeather() {
-    Requester.getWeatherData(searchText);
+  async function searchWeather() {
+    const response: ApiResponse = await Requester.getWeatherData(searchText);
+    setCityWeather(response)
     setSearchText('');
   }
 
