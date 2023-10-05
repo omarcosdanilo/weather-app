@@ -8,7 +8,7 @@
   display: flex;
   background: #fff;
   flex-direction: column;
-  width: 22rem;
+  width: auto;
   margin-bottom: 1rem;
   padding: 1rem 2rem 0 2rem;
 
@@ -23,7 +23,12 @@
 
   .cityWeather {
     display: flex;
+    justify-content: space-between;
     gap: 3rem;
+  }
+
+  .temperatureContainer {
+    display: flex;
   }
 
   .temperature {
@@ -41,6 +46,7 @@
 
   .infoContainer {
     display: flex;
+    justify-content: space-between;
     gap: 2.7rem;
   }
 

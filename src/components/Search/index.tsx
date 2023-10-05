@@ -4,10 +4,11 @@ import Requester from '../../common/utils/Requester';
 import { ApiResponse } from '../../interfaces/IApiResponse';
 
 interface ISerchProps {
-  setCityWeather: Dispatch<SetStateAction<ApiResponse>>
+  setCityWeather: Dispatch<SetStateAction<ApiResponse>>;
+  setFirstSearch: Dispatch<SetStateAction<boolean>>
 }
 
-function Search({ setCityWeather }: ISerchProps) {
+function Search({ setCityWeather, setFirstSearch }: ISerchProps) {
 
   const [searchText, setSearchText] = useState('');
 
@@ -15,6 +16,7 @@ function Search({ setCityWeather }: ISerchProps) {
     const response: ApiResponse = await Requester.getWeatherData(searchText);
     setCityWeather(response)
     setSearchText('');
+    setFirstSearch(true);
   }
 
   return (  
