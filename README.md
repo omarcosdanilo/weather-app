@@ -21,4 +21,4 @@ Typescript
 ## Demonstração
 
 
-![GIF](/assets/weatherApp.gif)
+![GIF](src/assets/weatherApp.gif)
