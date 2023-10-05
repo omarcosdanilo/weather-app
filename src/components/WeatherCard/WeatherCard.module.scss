@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.content {
+  display: flex;
+  background: #fff;
+  flex-direction: column;
+  width: 22rem;
+  margin-bottom: 1rem;
+  padding: 1rem 2rem 0 2rem;
+
+  .cityName {
+    font-weight: 700;
+    font-size: smaller;
+  }
+
+  h1 {
+    font-weight: bold;
+  }
+
+  .cityWeather {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .temperature {
+    font-weight: bold;
+  }
+
+  .sensationTempature {
+    font-weight: bold;
+  }
+
+  .sensationText {
+    color: #3f3e3d;
+    font-weight: 100;
+  }
+
+  .infoContainer {
+    display: flex;
+    gap: 2.7rem;
+  }
+
+  .infoText {
+    color: #3f3e3d;
+    font-weight: 100;
+    margin-right: .5rem;
+  }
+
+  .infoNumber {
+    font-weight: bold;
+  }
+
+  .line {
+    border: 1px solid #ff8902;
+    margin-bottom: 1rem;
+  }
+}
